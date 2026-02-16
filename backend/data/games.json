@@ -1,0 +1,17 @@
+[
+    {
+        "name": "BGMI",
+        "rules": [
+            "No emulator",
+            "Team of 4"
+        ],
+        "howToPlay": [
+            "Knockout format",
+            "AutoLand"
+        ],
+        "tips": [
+            "Land safe",
+            "Carry meds"
+        ]
+    }
+]

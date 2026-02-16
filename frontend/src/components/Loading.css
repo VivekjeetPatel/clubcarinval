@@ -1,0 +1,40 @@
+/* Loading.css */
+.pixel-loader {
+    width: 200px;
+    height: 24px;
+    border: 4px solid white;
+    padding: 4px;
+    margin: 50px auto;
+    position: relative;
+    background: black;
+    box-shadow: 4px 4px 0 var(--accent2);
+}
+
+.pixel-bar {
+    height: 100%;
+    background: var(--accent1);
+    width: 0%;
+    animation: pixel-load 2s infinite steps(8);
+}
+
+@keyframes pixel-load {
+    0% {
+        width: 0%;
+    }
+
+    10% {
+        width: 10%;
+    }
+
+    30% {
+        width: 40%;
+    }
+
+    60% {
+        width: 70%;
+    }
+
+    100% {
+        width: 100%;
+    }
+}
