@@ -1,4 +1,14 @@
 [
-  { "name": "Vivek", "points": 120 },
-  { "name": "Ansh", "points": 95 }
+  {
+    "name": "Vivek",
+    "points": 120
+  },
+  {
+    "name": "Ansh",
+    "points": 95
+  },
+  {
+    "name": "Anshu",
+    "points": 195
+  }
 ]
