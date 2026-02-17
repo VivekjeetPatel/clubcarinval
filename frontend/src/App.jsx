@@ -5,6 +5,7 @@ import Notifications from "./pages/Notifications";
 import Games from "./pages/Games";
 import About from "./pages/About";
 import Developers from "./pages/Developers";
+import Admin from "./pages/Admin";
 import "./index.css"; // Ensure global styles are loaded
 
 function App() {
@@ -19,6 +20,7 @@ function App() {
                 <Route path="/games" element={<Games />} />
                 <Route path="/about" element={<About />} />
                 <Route path="/developers" element={<Developers />} />
+                <Route path="/admin" element={<Admin />} />
             </Routes>
             <Navbar />
         </BrowserRouter>

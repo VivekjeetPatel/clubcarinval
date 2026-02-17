@@ -1,0 +1,135 @@
+/* Admin.css */
+.pixel-input {
+    background: black;
+    border: 2px solid white;
+    color: white;
+    padding: 8px;
+    font-family: inherit;
+    margin-right: 5px;
+    outline: none;
+}
+
+.pixel-input.sm {
+    width: 60px;
+}
+
+.pixel-input.xs {
+    width: 40px;
+    text-align: center;
+}
+
+.pixel-input.pop {
+    flex-grow: 1;
+}
+
+.pixel-textarea {
+    width: 100%;
+    background: #111;
+    color: white;
+    border: 1px dotted white;
+    font-family: inherit;
+    padding: 8px;
+    margin-bottom: 10px;
+    resize: vertical;
+}
+
+.pixel-textarea:focus {
+    border: 1px solid var(--accent2);
+    background: black;
+}
+
+.pixel-input:focus {
+    box-shadow: 2px 2px 0 var(--accent2);
+}
+
+.admin-tabs {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.admin-tabs .btn.active {
+    background: var(--accent1);
+    color: black;
+    font-weight: bold;
+}
+
+.add-row {
+    display: flex;
+    gap: 5px;
+    margin-bottom: 20px;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 10px;
+    align-items: center;
+}
+
+.list-item {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px dashed gray;
+    padding: 8px 0;
+    align-items: center;
+    gap: 5px;
+}
+
+.rank-idx {
+    width: 30px;
+}
+
+.edit-input {
+    border: 1px dotted #555;
+    background: #111;
+}
+
+.edit-input:focus {
+    border: 1px solid white;
+    background: black;
+}
+
+.del-btn {
+    background: red;
+    border: 1px solid white;
+    color: white;
+    cursor: pointer;
+    padding: 4px 8px;
+    font-family: inherit;
+    font-size: 0.8rem;
+}
+
+.save-btn {
+    width: 100%;
+    margin-top: 20px;
+    background: green;
+    border-color: lightgreen;
+}
+
+.status-msg {
+    text-align: center;
+    color: yellow;
+    margin-bottom: 10px;
+    animation: flicker 1s infinite alternate;
+}
+
+/* Games Editor Specifics */
+.game-editor-card {
+    border: 1px solid #333;
+    padding: 10px;
+    margin-bottom: 20px;
+    background: rgba(255, 255, 255, 0.05);
+}
+
+.game-header {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 10px;
+    align-items: center;
+}
+
+.game-details-edit label {
+    display: block;
+    margin-bottom: 5px;
+    color: var(--accent2);
+    font-size: 0.9rem;
+}

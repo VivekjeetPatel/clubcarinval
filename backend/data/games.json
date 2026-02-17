@@ -1,17 +1,116 @@
 [
-    {
-        "name": "BGMI",
-        "rules": [
-            "No emulator",
-            "Team of 4"
-        ],
-        "howToPlay": [
-            "Knockout format",
-            "AutoLand"
-        ],
-        "tips": [
-            "Land safe",
-            "Carry meds"
-        ]
-    }
+  {
+    "name": "Jenga",
+    "icon": "🧱",
+    "howToPlay": [
+      "The towerf must be built properly before starting.",
+      "Players will play one by one in turns.",
+      "Remove one block carefully and place it on the top."
+    ],
+    "rules": [
+      "Use only one hand.",
+      "Do not shake or hit the table.",
+      "Remove only one block per turn.",
+      "If the tower falls during your turn, you lose.",
+      "Time limit per turn: 30 seconds.",
+      "Judge’s decision is final."
+    ],
+    "tips": []
+  },
+  {
+    "name": "Ping Pong",
+    "icon": "🏓",
+    "howToPlay": [
+      "Players stand on opposite sides of the table.",
+      "Use standard paddle and ball.",
+      "Start only after referee’s signal."
+    ],
+    "rules": [
+      "Match will be played up to 11 points.",
+      "Win by at least 2 points.",
+      "Ball must bounce once on each side during serve.",
+      "Each player gets 2 serves alternately.",
+      "Touching the table or net intentionally is a foul.",
+      "Fair play is compulsory."
+    ],
+    "tips": []
+  },
+  {
+    "name": "Paper Cutting",
+    "icon": "✂️",
+    "howToPlay": [
+      "Each participant will receive one sheet of paper.",
+      "Theme/design will be announced before start.",
+      "Use scissors only."
+    ],
+    "rules": [
+      "No pre-cut or extra paper allowed.",
+      "Time limit: 3–5 minutes.",
+      "No sharing of materials.",
+      "Judging will be based on neatness and creativity.",
+      "Late submissions will not be accepted."
+    ],
+    "tips": []
+  },
+  {
+    "name": "Memory Card",
+    "icon": "🃏",
+    "howToPlay": [
+      "Cards will be placed face down.",
+      "Players will take turns flipping two cards."
+    ],
+    "rules": [
+      "If cards match, player gets another turn.",
+      "If not, cards must be placed back in same position.",
+      "No touching extra cards.",
+      "No help from audience.",
+      "Player with maximum pairs wins."
+    ],
+    "tips": []
+  },
+  {
+    "name": "Push-ups",
+    "icon": "💪",
+    "howToPlay": [
+      "Body must stay straight.",
+      "Judge will count correct push-ups."
+    ],
+    "rules": [
+      "Only correct form will be counted.",
+      "Time limit: 1 minute.",
+      "No resting on knees.",
+      "Judge’s decision is final."
+    ],
+    "tips": []
+  },
+  {
+    "name": "Arm Wrestling",
+    "icon": "💪",
+    "howToPlay": [
+      "Elbows must stay on the table.",
+      "Start after referee’s signal."
+    ],
+    "rules": [
+      "No lifting elbow.",
+      "No unfair body movement.",
+      "First to pin opponent’s hand wins.",
+      "Referee decision is final."
+    ],
+    "tips": []
+  },
+  {
+    "name": "Tongue Twister",
+    "icon": "👅",
+    "howToPlay": [
+      "Participant must repeat given tongue twister 3 times continuously.",
+      "Speak clearly and confidently."
+    ],
+    "rules": [
+      "No major mistakes allowed.",
+      "Time limit: 1 minute.",
+      "If mistake happens, restart.",
+      "Best clarity and fluency wins."
+    ],
+    "tips": []
+  }
 ]

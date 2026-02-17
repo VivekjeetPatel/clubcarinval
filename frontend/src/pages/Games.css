@@ -1,0 +1,187 @@
+/* Games.css */
+
+.game-slider-container {
+    padding: 16px;
+    max-width: 600px;
+    /* Slightly wider for slider */
+    margin: 0 auto;
+    padding-bottom: 80px;
+    min-height: 80vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.page-title {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.slider-wrapper {
+    display: flex;
+    align-items: center;
+    /* Center vertically */
+    justify-content: space-between;
+    gap: 10px;
+    flex-grow: 1;
+}
+
+.game-slide {
+    flex: 1;
+    min-height: 400px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: left;
+    /* Keep text readable */
+    animation: slideIn 0.3s ease-out;
+    position: relative;
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: scale(0.95);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+.game-icon {
+    font-size: 4rem;
+    margin-bottom: 15px;
+    filter: drop-shadow(0 0 10px var(--accent1));
+    animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float {
+    0% {
+        transform: translateY(0px);
+    }
+
+    50% {
+        transform: translateY(-10px);
+    }
+
+    100% {
+        transform: translateY(0px);
+    }
+}
+
+.game-title {
+    font-size: 1.5rem;
+    border-bottom: 2px solid white;
+    padding-bottom: 10px;
+    margin-bottom: 15px;
+    width: 100%;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.game-content {
+    width: 100%;
+    max-height: 50vh;
+    /* Scrollable content if strict height needed */
+    overflow-y: auto;
+    padding-right: 5px;
+    /* Scrollbar styling for webkit */
+    scrollbar-width: thin;
+    scrollbar-color: var(--accent1) black;
+}
+
+/* Custom scrollbar */
+.game-content::-webkit-scrollbar {
+    width: 8px;
+}
+
+.game-content::-webkit-scrollbar-track {
+    background: black;
+}
+
+.game-content::-webkit-scrollbar-thumb {
+    background-color: var(--accent1);
+    border: 2px solid black;
+}
+
+.section {
+    margin-bottom: 15px;
+}
+
+.section-title {
+    margin-bottom: 8px;
+    font-size: 1rem;
+}
+
+.retro-yellow {
+    color: #ffff55;
+    text-shadow: 2px 2px 0 #555500;
+}
+
+.retro-blue {
+    color: var(--accent2);
+    text-shadow: 2px 2px 0 #005555;
+}
+
+.retro-pink {
+    color: var(--accent1);
+    text-shadow: 2px 2px 0 #550055;
+}
+
+.pixel-list {
+    padding-left: 20px;
+    list-style-type: square;
+}
+
+.pixel-list li {
+    margin-bottom: 5px;
+    line-height: 1.4;
+    font-size: 0.85rem;
+}
+
+.slider-btn {
+    background: black;
+    color: white;
+    border: 2px solid white;
+    font-family: inherit;
+    font-size: 1.5rem;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 3px 3px 0 var(--accent2);
+    transition: transform 0.1s;
+    z-index: 10;
+}
+
+.slider-btn:active {
+    transform: translate(2px, 2px);
+    box-shadow: 1px 1px 0 var(--accent2);
+}
+
+.slide-counter {
+    position: absolute;
+    bottom: 5px;
+    right: 10px;
+    font-size: 0.7rem;
+    opacity: 0.6;
+}
+
+/* Mobile Tweak: Buttons at bottom if screen fits */
+@media (max-width: 400px) {
+    .slider-wrapper {
+        flex-direction: column;
+    }
+
+    .slider-btn {
+        width: 100%;
+        margin: 5px 0;
+    }
+
+    .game-icon {
+        font-size: 3rem;
+    }
+}
