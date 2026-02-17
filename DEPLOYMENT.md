@@ -60,8 +60,13 @@ Ensure `backend/server.js` serves the frontend files in production (Hybrid Deplo
     *   **Publish Directory**: `dist`
     *   **Environment Variables** (Advanced Settings):
         *   Key: `VITE_API_URL`
-        *   Value: `https://clubcarinval-backend.onrender.com` (Your backend URL from Step 2)
+        *   Value: `https://clubcarinval-backend.onrender.com`
+    *   **Redirects/Rewrites** (Go to "Redirects/Rewrites" tab after creation):
+        *   **Source**: `/*`
+        *   **Destination**: `/index.html`
+        *   **Action**: `Rewrite`
 4.  Click **"Create Static Site"**.
+
 
 ---
 
