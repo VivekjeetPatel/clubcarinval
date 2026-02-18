@@ -1,88 +1,36 @@
-import { motion } from "framer-motion";
-import PixelIcon from "./PixelIcon";
+import { useRef, useEffect } from "react";
+import "./Background.css";
+
+// Helper to generate random box-shadow stars
+const generateStars = (n) => {
+    let value = `${Math.random() * 2000}px ${Math.random() * 2000}px #FFF`;
+    for (let i = 2; i <= n; i++) {
+        value += `, ${Math.random() * 2000}px ${Math.random() * 2000}px #FFF`;
+    }
+    return value;
+};
 
 export default function Background() {
-    const shapes = [
-        { name: "star", color: "#ffffff", size: 10, x: "10%", y: "20%", delay: 0 },
-        { name: "star", color: "#ffff00", size: 8, x: "80%", y: "10%", delay: 2 },
-        { name: "star", color: "#00f0ff", size: 12, x: "70%", y: "80%", delay: 1 },
-        { name: "invader", color: "#ff003c", size: 24, x: "90%", y: "50%", delay: 0 },
-        { name: "moon", color: "#fcee0a", size: 32, x: "5%", y: "85%", delay: 3 },
-        { name: "game", color: "#bd00ff", size: 20, x: "20%", y: "40%", delay: 4 },
-        { name: "invader", color: "#00ff00", size: 16, x: "50%", y: "50%", delay: 1.5 },
-    ];
+    // UseRefs to avoid recalculating on every render
+    const smallStars = useRef(generateStars(700));
+    const mediumStars = useRef(generateStars(200));
+    const largeStars = useRef(generateStars(100));
 
     return (
-        <div style={{
-            position: 'fixed',
-            top: 0,
-            left: 0,
-            width: '100%',
-            height: '100%',
-            zIndex: -1,
-            overflow: 'hidden',
-            pointerEvents: 'none',
-        }}>
-            {/* Deep Space Gradient */}
-            <div style={{
-                position: 'absolute',
-                width: '100%',
-                height: '100%',
-                background: 'radial-gradient(ellipse at bottom, #1b2735 0%, #090a0f 100%)',
-                opacity: 0.8
-            }} />
+        <div className="space-background">
+            <div className="stars-layer layer-1" style={{ boxShadow: smallStars.current }}></div>
+            <div className="stars-layer layer-2" style={{ boxShadow: mediumStars.current }}></div>
+            <div className="stars-layer layer-3" style={{ boxShadow: largeStars.current }}></div>
 
-            {/* Shapes Animation */}
-            {shapes.map((s, i) => (
-                <motion.div
-                    key={i}
-                    initial={{ opacity: 0.3, y: 0 }}
-                    animate={{
-                        opacity: [0.3, 0.8, 0.3],
-                        y: [0, -20, 0],
-                        x: [0, 5, 0]
-                    }}
-                    transition={{
-                        duration: 4 + i,
-                        repeat: Infinity,
-                        delay: s.delay,
-                        ease: "easeInOut"
-                    }}
-                    style={{
-                        position: 'absolute',
-                        left: s.x,
-                        top: s.y,
-                    }}
-                >
-                    <PixelIcon name={s.name} size={s.size} color={s.color} />
-                </motion.div>
-            ))}
+            {/* Floating Space Objects (Planets/Galaxies) */}
+            <div className="space-object planet-1">🪐</div>
+            <div className="space-object galaxy-1">🌌</div>
+            <div className="space-object planet-2">🌍</div>
 
-            {/* CONTINUOUS SPACESHIP FLIGHT */}
-            <motion.div
-                initial={{ x: "-10%", y: "80%" }}
-                animate={{
-                    x: "110%",
-                    y: "20%"
-                }}
-                transition={{
-                    duration: 15,
-                    ease: "linear",
-                    repeat: Infinity,
-                    repeatDelay: 0
-                }}
-                style={{
-                    position: 'absolute',
-                    width: '60px',
-                    height: '60px',
-                    zIndex: -1
-                }}
-            >
-                <div style={{ transform: 'rotate(45deg)' }}>
-                    <PixelIcon name="spaceship" size={60} color="#00f0ff" />
-                </div>
-            </motion.div>
-
+            {/* The Spaceship */}
+            <div className="spaceship-container">
+                <div className="pixel-spaceship">🚀</div>
+            </div>
         </div>
     );
 }

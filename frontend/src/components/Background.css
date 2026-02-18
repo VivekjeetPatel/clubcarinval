@@ -1,0 +1,156 @@
+/* Background.css */
+.space-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    z-index: -10;
+    background: radial-gradient(ellipse at bottom, #1b2735 0%, #090a0f 100%);
+    overflow: hidden;
+}
+
+/* Base Star Layer */
+.stars-layer {
+    width: 1px;
+    height: 1px;
+    background: transparent;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+/* Layer 1: Small & Fast */
+.layer-1 {
+    animation-name: animStar;
+    animation-duration: 50s;
+    /* Faster */
+    opacity: 0.8;
+}
+
+/* Layer 2: Medium */
+.layer-2 {
+    width: 2px;
+    height: 2px;
+    animation-name: animStar;
+    animation-duration: 100s;
+    opacity: 0.6;
+}
+
+/* Layer 3: Large & Slow */
+.layer-3 {
+    width: 3px;
+    height: 3px;
+    animation-name: animStar;
+    animation-duration: 150s;
+    /* Slowest */
+    opacity: 0.4;
+    border-radius: 50%;
+    /* Rounder large stars */
+}
+
+/* Keyframes for Vertical Travel (Top -> Bottom) */
+/* To make it infinite, we render the shadow set twice vertically normally, 
+   but since box-shadow is expensive, a common trick is to use :after.
+   However, simpler vertical translation works if the shadow spread is large enough. 
+   We will simply translate Y from 0 to -2000px (assuming stars are generated in a 2000px grid)
+   Wait, if we move TOP to BOTTOM, we translate from -2000px to 0.
+*/
+@keyframes animStar {
+    from {
+        transform: translateY(-2000px);
+    }
+
+    to {
+        transform: translateY(0px);
+    }
+}
+
+/* To loop pseudo-infinitely seamlessly, usually we need a duplicate layer. 
+   Let's add :after to duplicate the stars above the viewport for smooth scrolling.
+*/
+.stars-layer:after {
+    content: " ";
+    position: absolute;
+    top: 2000px;
+    /* Place duplicate below */
+    width: inherit;
+    height: inherit;
+    background: inherit;
+    box-shadow: inherit;
+    /* Inherit the massively generated shadow string */
+}
+
+
+/* Floating Space Objects */
+.space-object {
+    position: absolute;
+    font-size: 2rem;
+    top: -50px;
+    /* Start off screen */
+    filter: blur(0.5px) grayscale(0.3);
+    opacity: 0.7;
+    animation-name: floatDown;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+.planet-1 {
+    left: 10%;
+    animation-duration: 25s;
+    font-size: 3rem;
+    animation-delay: 0s;
+}
+
+.galaxy-1 {
+    right: 15%;
+    animation-duration: 40s;
+    font-size: 4rem;
+    animation-delay: 15s;
+    filter: blur(1px);
+}
+
+.planet-2 {
+    left: 70%;
+    animation-duration: 35s;
+    font-size: 2rem;
+    animation-delay: 5s;
+}
+
+@keyframes floatDown {
+    from {
+        transform: translateY(-100vh) rotate(0deg);
+    }
+
+    to {
+        transform: translateY(120vh) rotate(360deg);
+    }
+}
+
+/* Spaceship */
+.spaceship-container {
+    position: absolute;
+    bottom: 10%;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: -5;
+    /* Add subtle swaying */
+    animation: sway 4s ease-in-out infinite;
+}
+
+.pixel-spaceship {
+    font-size: 3rem;
+    /* Engine glow */
+    filter: drop-shadow(0 4px 10px #00f0ff);
+}
+
+@keyframes sway {
+
+    0%,
+    100% {
+        transform: translateX(-50%) translateY(0px);
+    }
+
+    50% {
+        transform: translateX(-50%) translateY(10px);
+    }
+}
