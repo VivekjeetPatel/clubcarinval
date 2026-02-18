@@ -1,17 +1,23 @@
 import { useEffect, useState } from "react";
 import { getNotifications } from "../api";
 import Header from "../components/Header";
+import useSwipeNavigation from "../hooks/useSwipeNavigation";
+
+const PATH_ORDER = ["/", "/notifications", "/games", "/about", "/developers"];
 
 export default function Notifications() {
+    const bindSwipe = useSwipeNavigation(PATH_ORDER);
     const [data, setData] = useState([]);
+
 
     useEffect(() => {
         getNotifications().then(res => setData(res.data));
     }, []);
 
     return (
-        <div className="container">
+        <div className="container" {...bindSwipe()} style={{ touchAction: 'pan-y' }}>
             <Header title="🔔 Alerts" />
+
 
             {data.map((n, i) => (
                 <div key={i} className="card notification-card">
