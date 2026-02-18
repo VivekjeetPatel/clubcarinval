@@ -13,8 +13,8 @@ import "./index.css"; // Ensure global styles are loaded
 function App() {
     return (
         <BrowserRouter>
-            {/* Starfield background could be added here as a fixed div behind everything */}
-            <div className="starfield"></div>
+            <Background />
+
 
             <Routes>
                 <Route path="/" element={<Leaderboard />} />
