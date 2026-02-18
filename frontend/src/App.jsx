@@ -7,6 +7,7 @@ import About from "./pages/About";
 import Developers from "./pages/Developers";
 import Admin from "./pages/Admin";
 import Background from "./components/Background";
+import PixelTrail from "./components/PixelTrail";
 import "./index.css"; // Ensure global styles are loaded
 
 
@@ -14,6 +15,8 @@ function App() {
     return (
         <BrowserRouter>
             <Background />
+            <PixelTrail />
+
 
 
             <Routes>
