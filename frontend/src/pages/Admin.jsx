@@ -14,7 +14,8 @@ export default function Admin() {
     const [leaderboard, setLeaderboard] = useState([]);
     const [notifications, setNotifications] = useState([]);
     const [games, setGames] = useState([]);
-    const [about, setAbout] = useState({ event: "", club: "", fest: "" });
+    const [about, setAbout] = useState({ event: "", club: "", fest: "", leftLogo: "", rightLogo: "", instagram: "" });
+
 
     const [status, setStatus] = useState("");
 
@@ -240,14 +241,42 @@ export default function Admin() {
                             rows={4}
                         />
 
-                        <label>🎭 Fest Details:</label>
                         <textarea
                             className="pixel-textarea"
                             value={about.fest}
                             onChange={(e) => setAbout({ ...about, fest: e.target.value })}
                             rows={4}
                         />
+
+                        <div className="logos-edit-section" style={{ marginTop: '20px', borderTop: '1px dashed gray', paddingTop: '10px' }}>
+                            <h3>🎨 Design & Social</h3>
+
+                            <label>Left Logo URL:</label>
+                            <input
+                                className="pixel-input"
+                                value={about.leftLogo || ""}
+                                onChange={(e) => setAbout({ ...about, leftLogo: e.target.value })}
+                                style={{ width: '100%', marginBottom: '10px' }}
+                            />
+
+                            <label>Right Logo URL:</label>
+                            <input
+                                className="pixel-input"
+                                value={about.rightLogo || ""}
+                                onChange={(e) => setAbout({ ...about, rightLogo: e.target.value })}
+                                style={{ width: '100%', marginBottom: '10px' }}
+                            />
+
+                            <label>📸 Instagram URL:</label>
+                            <input
+                                className="pixel-input pop"
+                                value={about.instagram || ""}
+                                onChange={(e) => setAbout({ ...about, instagram: e.target.value })}
+                                style={{ width: '100%' }}
+                            />
+                        </div>
                     </div>
+
                     <button onClick={saveAbout} className="btn save-btn">💾 Save Details</button>
                 </div>
             )}

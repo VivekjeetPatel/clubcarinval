@@ -1,5 +1,8 @@
 {
-  "event": "Event detailsss",
+  "event": "Event details",
   "club": "Club description",
-  "fest": "Fest details"
+  "fest": "Fest details",
+  "leftLogo": "https://cdn-icons-png.flaticon.com/512/2917/2917633.png",
+  "rightLogo": "https://cdn-icons-png.flaticon.com/512/2622/2622434.png",
+  "instagram": "https://instagram.com/clubcarinval"
 }

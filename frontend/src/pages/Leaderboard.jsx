@@ -1,6 +1,8 @@
 import { useEffect, useState } from "react";
 import { getLeaderboard } from "../api";
 import Loading from "../components/Loading";
+import Header from "../components/Header";
+
 
 export default function Leaderboard() {
     const [data, setData] = useState([]);
@@ -22,7 +24,8 @@ export default function Leaderboard() {
 
     return (
         <div className="container" style={{ paddingBottom: '80px' }}>
-            <h1>🏆 Leaderboard</h1>
+            <Header title="🏆 Leaderboard" />
+
             {loading ? (
                 <Loading />
             ) : (
