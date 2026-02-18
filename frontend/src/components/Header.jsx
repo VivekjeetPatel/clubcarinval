@@ -15,10 +15,24 @@ export default function Header({ title }) {
     }, []);
 
     return (
-        <div className="page-header">
-            <img src={logos.left || "https://placehold.co/50x50/000/FFF?text=L"} alt="Left Logo" className="header-logo left" />
+        <div className="app-header">
+            <div className="logo-container">
+                <img
+                    src={logos.left || "https://placehold.co/50x50/000/FFF?text=L"}
+                    alt="Left Logo"
+                    className="logo-img"
+                />
+            </div>
+
             <h1 className="header-title">{title}</h1>
-            <img src={logos.right || "https://placehold.co/50x50/000/FFF?text=R"} alt="Right Logo" className="header-logo right" />
+
+            <div className="logo-container">
+                <img
+                    src={logos.right || "https://placehold.co/50x50/000/FFF?text=R"}
+                    alt="Right Logo"
+                    className="logo-img"
+                />
+            </div>
         </div>
     );
 }
