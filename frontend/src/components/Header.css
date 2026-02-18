@@ -5,11 +5,17 @@
     align-items: center;
     padding: 15px 0;
     margin-bottom: 2rem;
-    border-bottom: 4px solid var(--border-color);
     background: var(--bg-dark);
     position: sticky;
     top: 0;
     z-index: 900;
+
+    /* Pixelated Border Bottom */
+    background-image: linear-gradient(to right, var(--border-color) 50%, transparent 50%);
+    background-position: bottom;
+    background-size: 16px 4px;
+    /* Dash size */
+    background-repeat: repeat-x;
 }
 
 .header-title {
@@ -19,8 +25,6 @@
     flex: 1;
     font-family: 'Press Start 2P', cursive;
     font-size: 0.9rem;
-    /* Smaller font for pixel feel */
-    /* Glitch-like shadow */
     text-shadow: 2px 2px 0px var(--accent1);
     letter-spacing: 1px;
     margin: 0;
@@ -35,7 +39,6 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    /* Hard pixel shadows */
     box-shadow: 4px 4px 0px #000;
 }
 
@@ -44,10 +47,8 @@
     height: 100%;
     object-fit: contain;
     image-rendering: pixelated;
-    /* Crucial for pixel art feeling */
 }
 
-/* Mobile Tweak */
 @media (max-width: 400px) {
     .header-title {
         font-size: 0.7rem;

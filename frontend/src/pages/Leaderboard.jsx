@@ -3,6 +3,7 @@ import { getLeaderboard } from "../api";
 import Loading from "../components/Loading";
 import Header from "../components/Header";
 import useSwipeNavigation from "../hooks/useSwipeNavigation";
+import PixelIcon from "../components/PixelIcon"; // Import
 import "./Leaderboard.css";
 
 const PATH_ORDER = ["/", "/notifications", "/games", "/about", "/developers"];
@@ -15,7 +16,6 @@ export default function Leaderboard() {
     useEffect(() => {
         getLeaderboard()
             .then(res => {
-                // Sort by points descending
                 const sorted = res.data.sort((a, b) => b.points - a.points);
                 setData(sorted);
                 setLoading(false);
@@ -31,7 +31,6 @@ export default function Leaderboard() {
 
     return (
         <div className="container leaderboard-container" style={{ paddingBottom: '80px', touchAction: 'pan-y' }}>
-
             <Header title="🏆 Leaderboard" />
 
             {loading ? (
@@ -44,7 +43,9 @@ export default function Leaderboard() {
                             {/* 2nd Place */}
                             {top3[1] && (
                                 <div className="podium-place second">
-                                    <div className="avatar">🥈</div>
+                                    <div className="avatar">
+                                        <PixelIcon name="medal_silver" size={40} />
+                                    </div>
                                     <div className="player-name">{top3[1].name}</div>
                                     <div className="score">{top3[1].points} pts</div>
                                     <div className="podium-block">2</div>
@@ -54,7 +55,9 @@ export default function Leaderboard() {
                             {/* 1st Place */}
                             {top3[0] && (
                                 <div className="podium-place first">
-                                    <div className="avatar">👑</div>
+                                    <div className="avatar">
+                                        <PixelIcon name="crown" size={50} color="#ffd700" />
+                                    </div>
                                     <div className="player-name">{top3[0].name}</div>
                                     <div className="score">{top3[0].points} pts</div>
                                     <div className="podium-block">1</div>
@@ -64,7 +67,9 @@ export default function Leaderboard() {
                             {/* 3rd Place */}
                             {top3[2] && (
                                 <div className="podium-place third">
-                                    <div className="avatar">🥉</div>
+                                    <div className="avatar">
+                                        <PixelIcon name="medal_bronze" size={30} />
+                                    </div>
                                     <div className="player-name">{top3[2].name}</div>
                                     <div className="score">{top3[2].points} pts</div>
                                     <div className="podium-block">3</div>

@@ -6,7 +6,9 @@ import Games from "./pages/Games";
 import About from "./pages/About";
 import Developers from "./pages/Developers";
 import Admin from "./pages/Admin";
+import Background from "./components/Background";
 import "./index.css"; // Ensure global styles are loaded
+
 
 function App() {
     return (
