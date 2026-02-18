@@ -1,138 +1,141 @@
+/* Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&family=VT323&display=swap');
+
 :root {
-  --bg: #000000;
-  --text: #ffffff;
-  --accent1: #A158A6;
-  /* Purple/Pink neon */
-  --accent2: #7BF8FD;
-  /* Cyan neon */
-  --card-bg: #0a0a0a;
+  /* Colors */
+  --bg-dark: #050505;
+  --bg-darker: #000000;
+  --card-bg: #111111;
+
+  --accent1: #ff003c;
+  /* Glitch Red */
+  --accent2: #00f0ff;
+  /* Cyber Blue */
+  --accent3: #fcee0a;
+  /* Cyber Yellow */
+
+  --text-main: #eeeeee;
+  --text-dim: #aaaaaa;
+
+  --border-color: #333333;
+  --border-highlight: #555555;
 }
 
-body {
+* {
+  box-sizing: border-box;
   margin: 0;
-  background: radial-gradient(circle at top, #0a0a1a, #000);
-  color: var(--text);
-  font-family: 'Courier New', Courier, monospace;
-  /* Fallback for pixel style */
-  /* Ideally import "Press Start 2P" or similar from Google Fonts */
-  min-height: 100vh;
-  overflow-x: hidden;
+  padding: 0;
 }
-
-/* Pixel Font Import */
-@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
 
 body {
-  font-family: "Press Start 2P", monospace;
+  background-color: var(--bg-dark);
+  color: var(--text-main);
+  font-family: 'VT323', monospace;
+  /* Body Font */
+  font-size: 1.2rem;
+  overflow-x: hidden;
+  line-height: 1.4;
 }
 
-/* Utilities */
-.container {
-  padding: 16px;
-  max-width: 480px;
-  margin: 0 auto;
-  padding-bottom: 80px;
-  /* Space for fixed navbar */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: 'Press Start 2P', cursive;
+  /* Heading Font */
+  text-transform: uppercase;
+  color: white;
+  margin-bottom: 20px;
+  line-height: 1.2;
+  text-shadow: 2px 2px 0px #000;
 }
 
 h1 {
-  text-align: center;
-  text-transform: uppercase;
-  text-shadow: 2px 2px 0 var(--accent1);
   font-size: 1.5rem;
-  margin-bottom: 2rem;
+  text-align: center;
+  color: var(--accent3);
 }
 
-/* Pixel Card */
+h2 {
+  font-size: 1.2rem;
+  color: var(--accent2);
+}
+
+h3 {
+  font-size: 1rem;
+}
+
+/* Global Container */
+.container {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+  padding-bottom: 100px;
+  min-height: 100vh;
+}
+
+/* Card Style (Pixelated) */
 .card {
-  border: 2px solid white;
-  padding: 16px;
-  margin: 16px 0;
   background: var(--card-bg);
-  box-shadow: 4px 4px 0 var(--accent1);
+  border: 4px solid var(--border-color);
+  padding: 15px;
+  margin-bottom: 15px;
+  position: relative;
+  /* Pixel Corners */
+  box-shadow:
+    -4px 0 0 0 var(--border-color),
+    4px 0 0 0 var(--border-color),
+    0 -4px 0 0 var(--border-color),
+    0 4px 0 0 var(--border-color);
+}
+
+/* Buttons (Pixelated) */
+.btn {
+  font-family: 'Press Start 2P', cursive;
+  font-size: 0.7rem;
+  padding: 12px 15px;
+  background: var(--border-color);
+  color: var(--accent2);
+  border: 2px solid var(--accent2);
+  cursor: pointer;
+  text-decoration: none;
+  display: inline-block;
+  text-transform: uppercase;
+  box-shadow: 4px 4px 0px #000;
   transition: transform 0.1s;
 }
 
-.card:active {
-  transform: translate(2px, 2px);
-  box-shadow: 2px 2px 0 var(--accent1);
-}
-
-/* 3D Pixel Button */
-.btn {
-  border: 2px solid white;
-  padding: 10px 15px;
-  background: black;
-  color: white;
-  box-shadow: 3px 3px 0 var(--accent2);
-  cursor: pointer;
-  text-transform: uppercase;
-  font-family: inherit;
-  font-size: 0.8rem;
-  margin-top: 10px;
-  display: inline-block;
-  text-decoration: none;
-}
-
 .btn:active {
-  box-shadow: 1px 1px 0 var(--accent2);
   transform: translate(2px, 2px);
+  box-shadow: 2px 2px 0px #000;
 }
 
-/* Animations */
-@keyframes flicker {
-  0% {
-    opacity: 1;
-  }
-
-  50% {
-    opacity: 0.8;
-  }
-
-  100% {
-    opacity: 1;
-  }
+.btn.small-btn {
+  padding: 8px 10px;
+  font-size: 0.6rem;
 }
 
-
-.neon-text {
-  animation: flicker 2s infinite;
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
 }
 
-/* Starfield Background */
-.starfield {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: black;
-  z-index: -1;
-  overflow: hidden;
+::-webkit-scrollbar-track {
+  background: var(--bg-darker);
 }
 
-.starfield::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-image:
-    radial-gradient(white, rgba(255, 255, 255, .2) 2px, transparent 3px),
-    radial-gradient(white, rgba(255, 255, 255, .15) 1px, transparent 2px),
-    radial-gradient(white, rgba(255, 255, 255, .1) 2px, transparent 3px);
-  background-size: 550px 550px, 350px 350px, 250px 250px;
-  background-position: 0 0, 40px 60px, 130px 270px;
-  animation: stars 60s linear infinite;
+::-webkit-scrollbar-thumb {
+  background: var(--border-highlight);
+  border: 2px solid var(--bg-darker);
 }
 
-@keyframes stars {
-  from {
-    transform: translateY(0);
-  }
+/* Utility */
+.text-center {
+  text-align: center;
+}
 
-  to {
-    transform: translateY(-1000px);
-  }
+.retro-text {
+  font-family: 'Press Start 2P', cursive;
 }

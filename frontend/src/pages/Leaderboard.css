@@ -1,0 +1,168 @@
+.leaderboard-container {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+/* PODIUM STYLES */
+.podium {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    gap: 1rem;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+
+.podium-place {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    position: relative;
+}
+
+.podium-place .avatar {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+    animation: bounce 2s infinite ease-in-out;
+}
+
+.podium-place .player-name {
+    font-family: 'Press Start 2P', cursive;
+    font-size: 0.7rem;
+    color: var(--text-main);
+    margin-bottom: 5px;
+    max-width: 80px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.podium-place .score {
+    font-family: 'VT323', monospace;
+    font-size: 1rem;
+    color: var(--accent2);
+}
+
+.podium-block {
+    width: 80px;
+    background: var(--card-bg);
+    border: 4px solid var(--border-color);
+    box-shadow: 4px 4px 0px #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Press Start 2P', cursive;
+    color: #555;
+    position: relative;
+}
+
+/* 1st Place - Gold */
+.podium-place.first {
+    z-index: 2;
+    transform: translateY(-10px);
+}
+
+.first .podium-block {
+    height: 120px;
+    background: #ffd700;
+    /* Gold */
+    border-color: #b8860b;
+    color: #8b6508;
+    font-size: 2rem;
+    box-shadow: 0 0 20px rgba(255, 215, 0, 0.5);
+}
+
+.first .avatar {
+    font-size: 3rem;
+}
+
+/* 2nd Place - Silver */
+.podium-place.second {
+    order: -1;
+    /* Move to left */
+}
+
+.second .podium-block {
+    height: 80px;
+    background: #c0c0c0;
+    /* Silver */
+    border-color: #a9a9a9;
+    color: #696969;
+    font-size: 1.5rem;
+}
+
+/* 3rd Place - Bronze */
+.podium-place.third {
+    order: 1;
+    /* Move to right */
+}
+
+.third .podium-block {
+    height: 60px;
+    background: #cd7f32;
+    /* Bronze */
+    border-color: #8b4513;
+    color: #5d2906;
+    font-size: 1.2rem;
+}
+
+/* List Items */
+.leaderboard-list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.rank-card {
+    display: flex;
+    align-items: center;
+    background: var(--card-bg);
+    border: 2px solid var(--border-color);
+    padding: 10px;
+    box-shadow: 4px 4px 0px #000;
+    transition: transform 0.1s;
+}
+
+.rank-card:active {
+    transform: translate(2px, 2px);
+    box-shadow: 2px 2px 0px #000;
+}
+
+.rank-idx {
+    font-family: 'Press Start 2P', cursive;
+    width: 40px;
+    text-align: center;
+    color: var(--text-dim);
+}
+
+.player-info {
+    flex: 1;
+    padding-left: 10px;
+}
+
+.list-name {
+    display: block;
+    font-family: 'VT323', monospace;
+    font-size: 1.2rem;
+    color: var(--text-main);
+}
+
+.list-score {
+    font-family: 'Press Start 2P', cursive;
+    font-size: 0.8rem;
+    color: var(--accent2);
+}
+
+@keyframes bounce {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-5px);
+    }
+}
