@@ -1,4 +1,3 @@
-```
 import { useEffect, useState } from "react";
 import { getNotifications } from "../api";
 import Header from "../components/Header";
@@ -16,7 +15,7 @@ export default function Notifications() {
     }, []);
 
     return (
-        <div className="container" {...bindSwipe()} style={{ touchAction: 'pan-y' }}>
+        <div className="container" style={{ touchAction: 'pan-y' }}>
             <Header title="🔔 Alerts" />
 
 
