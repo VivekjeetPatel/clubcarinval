@@ -4,6 +4,8 @@ import {
     updateLeaderboard, updateNotifications, updateGames, updateAbout
 } from "../api";
 import "./Admin.css";
+import Header from "../components/Header";
+
 
 export default function Admin() {
     const [secret, setSecret] = useState("");
@@ -115,7 +117,8 @@ export default function Admin() {
 
     return (
         <div className="container" style={{ maxWidth: '800px' }}>
-            <h1>⚙️ Admin Control</h1>
+            <Header title="⚙️ Admin Control" />
+
 
             <div className="admin-tabs">
                 {['leaderboard', 'notifications', 'games', 'about'].map(tab => (

@@ -2,6 +2,8 @@ import { useEffect, useState } from "react";
 import { getGames } from "../api";
 import "./Games.css"; // Create this usage
 import Loading from "../components/Loading";
+import Header from "../components/Header";
+
 
 export default function Games() {
     const [games, setGames] = useState([]);
@@ -30,7 +32,8 @@ export default function Games() {
 
     return (
         <div className="game-slider-container">
-            <h1 className="page-title">🎮 Games</h1>
+            <Header title="🎮 Games" />
+
 
             <div className="slider-wrapper">
                 <button className="slider-btn prev" onClick={prevSlide}>&lt;</button>

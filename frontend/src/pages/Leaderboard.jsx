@@ -2,10 +2,14 @@ import { useEffect, useState } from "react";
 import { getLeaderboard } from "../api";
 import Loading from "../components/Loading";
 import Header from "../components/Header";
+import useSwipeNavigation from "../hooks/useSwipeNavigation";
 
+const PATH_ORDER = ["/", "/notifications", "/games", "/about", "/developers"];
 
 export default function Leaderboard() {
+    const bindSwipe = useSwipeNavigation(PATH_ORDER);
     const [data, setData] = useState([]);
+
     const [loading, setLoading] = useState(true);
 
     useEffect(() => {
@@ -23,8 +27,9 @@ export default function Leaderboard() {
     }, []);
 
     return (
-        <div className="container" style={{ paddingBottom: '80px' }}>
+        <div className="container" {...bindSwipe()} style={{ paddingBottom: '80px', touchAction: 'pan-y' }}>
             <Header title="🏆 Leaderboard" />
+
 
             {loading ? (
                 <Loading />

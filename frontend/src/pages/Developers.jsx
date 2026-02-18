@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { getDevelopers } from "../api";
+import Header from "../components/Header";
 
 export default function Developers() {
     const [devs, setDevs] = useState([]);
@@ -10,7 +11,8 @@ export default function Developers() {
 
     return (
         <div className="container">
-            <h1>👨‍💻 Devs</h1>
+            <Header title="👨‍💻 Devs" />
+
             {devs.map((dev, i) => (
                 <div key={i} className="card dev-card" style={{ textAlign: 'center' }}>
                     <div className="avatar" style={{ fontSize: '3rem', marginBottom: '10px' }}>👾</div>

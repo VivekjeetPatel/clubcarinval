@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { getNotifications } from "../api";
+import Header from "../components/Header";
 
 export default function Notifications() {
     const [data, setData] = useState([]);
@@ -10,7 +11,8 @@ export default function Notifications() {
 
     return (
         <div className="container">
-            <h1>🔔 Alerts</h1>
+            <Header title="🔔 Alerts" />
+
             {data.map((n, i) => (
                 <div key={i} className="card notification-card">
                     <div className="camp-title" style={{ color: 'var(--accent2)', marginBottom: '5px' }}>
