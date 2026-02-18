@@ -18,7 +18,8 @@ export default function About() {
     if (!data) return <div className="container"><Loading /></div>;
 
     return (
-        <div className="container">
+        <div className="container" style={{ touchAction: 'pan-y' }}>
+
             <Header title="ℹ️ About" />
 
             <div className="card">

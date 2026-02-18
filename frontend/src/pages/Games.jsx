@@ -35,7 +35,8 @@ export default function Games() {
     const game = games[currentIndex];
 
     return (
-        <div className="game-slider-container">
+        <div className="game-slider-container" style={{ touchAction: 'pan-y' }}>
+
             <Header title="🎮 Games" />
 
 
