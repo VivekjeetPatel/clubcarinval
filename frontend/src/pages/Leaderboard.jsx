@@ -31,7 +31,8 @@ export default function Leaderboard() {
 
     return (
         <div className="container leaderboard-container" style={{ paddingBottom: '80px', touchAction: 'pan-y' }}>
-            <Header title="🏆 Leaderboard" />
+            <Header title="Leaderboard" icon="trophy" />
+
 
             {loading ? (
                 <Loading />

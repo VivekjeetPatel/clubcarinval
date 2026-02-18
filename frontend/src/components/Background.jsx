@@ -32,6 +32,7 @@ export default function Background() {
                 opacity: 0.8
             }} />
 
+            {/* Shapes Animation */}
             {shapes.map((s, i) => (
                 <motion.div
                     key={i}
@@ -56,6 +57,32 @@ export default function Background() {
                     <PixelIcon name={s.name} size={s.size} color={s.color} />
                 </motion.div>
             ))}
+
+            {/* CONTINUOUS SPACESHIP FLIGHT */}
+            <motion.div
+                initial={{ x: "-10%", y: "80%" }}
+                animate={{
+                    x: "110%",
+                    y: "20%"
+                }}
+                transition={{
+                    duration: 15,
+                    ease: "linear",
+                    repeat: Infinity,
+                    repeatDelay: 0
+                }}
+                style={{
+                    position: 'absolute',
+                    width: '60px',
+                    height: '60px',
+                    zIndex: -1
+                }}
+            >
+                <div style={{ transform: 'rotate(45deg)' }}>
+                    <PixelIcon name="spaceship" size={60} color="#00f0ff" />
+                </div>
+            </motion.div>
+
         </div>
     );
 }

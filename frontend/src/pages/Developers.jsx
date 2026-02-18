@@ -17,7 +17,8 @@ export default function Developers() {
     return (
         <div className="container" style={{ touchAction: 'pan-y' }}>
 
-            <Header title="👨‍💻 Devs" />
+            <Header title="Devs" icon="users" />
+
 
             {devs.map((dev, i) => (
                 <div key={i} className="card dev-card" style={{ textAlign: 'center' }}>

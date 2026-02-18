@@ -20,6 +20,9 @@ export default function PixelIcon({ name, size = 24, color = "white", active = f
         star: <path d="M8 0H10V6H16V8H10V14H8V8H2V6H8V0Z" fill={finalColor} />,
         moon: <path d="M6 2H10V4H12V6H14V10H12V12H10V14H6V12H4V10H2V6H4V4H6V2ZM8 6V10H10V6H8Z" fill={finalColor} />,
         invader: <path d="M2 0H8V2H10V8H8V6H6V8H8V10H2V8H4V6H2V8H0V2H2V0ZM2 2V4H4V2H2ZM6 2V4H8V2H6Z" fill={finalColor} />,
+
+        // Spaceship for animation
+        spaceship: <path d="M6 0H10V2H12V6H14V8H16V14H14V12H12V16H10V14H6V16H4V12H2V14H0V8H2V6H4V2H6V0ZM6 4V10H10V4H6Z" fill={finalColor} />,
     };
 
     return (

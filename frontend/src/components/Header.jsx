@@ -1,8 +1,9 @@
 import { useEffect, useState } from "react";
 import { getAbout } from "../api";
 import "./Header.css";
+import PixelIcon from "./PixelIcon";
 
-export default function Header({ title }) {
+export default function Header({ title, icon }) {
     const [logos, setLogos] = useState({ left: "", right: "" });
 
     useEffect(() => {
@@ -24,7 +25,10 @@ export default function Header({ title }) {
                 />
             </div>
 
-            <h1 className="header-title">{title}</h1>
+            <h1 className="header-title" style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '10px' }}>
+                {icon && <PixelIcon name={icon} size={20} color="var(--accent3)" />}
+                {title}
+            </h1>
 
             <div className="logo-container">
                 <img

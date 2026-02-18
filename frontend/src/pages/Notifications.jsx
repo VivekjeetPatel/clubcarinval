@@ -16,7 +16,8 @@ export default function Notifications() {
 
     return (
         <div className="container" style={{ touchAction: 'pan-y' }}>
-            <Header title="🔔 Alerts" />
+            <Header title="Alerts" icon="bell" />
+
 
 
             {data.map((n, i) => (

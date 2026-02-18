@@ -59,7 +59,8 @@ export default function Games() {
 
     return (
         <div className="game-slider-container" style={{ touchAction: 'pan-y' }}>
-            <Header title="🎮 Games" />
+            <Header title="Games" icon="game" />
+
 
             <div className="slider-wrapper">
                 <button className="slider-btn prev" onClick={prevSlide}>&lt;</button>

@@ -19,7 +19,8 @@ export default function About() {
 
     return (
         <div className="container" style={{ touchAction: 'pan-y' }}>
-            <Header title="ℹ️ About" />
+            <Header title="About" icon="info" />
+
 
             <div className="card">
                 <h3 style={{ color: 'var(--accent1)' }}>EVENT:</h3>
