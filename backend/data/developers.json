@@ -1,8 +1,30 @@
 [
     {
-        "name": "Vivek",
-        "role": "Frontend",
-        "contact": "https://github.com/...",
-        "connect": "https://linkedin.com/..."
+        "name": "Vivekjeet Patel",
+        "role": "Full Stack Developer",
+        "contact": "https://github.com/VivekjeetPatel",
+        "social": "https://instagram.com/vivekjeetpatel",
+        "connect": "https://www.linkedin.com/in/vivekjeet-patel/"
+    },
+    {
+        "name": "Ansh",
+        "role": "Frontend Developer",
+        "contact": "https://github.com/",
+        "social": "https://instagram.com/",
+        "connect": "https://linkedin.com/"
+    },
+    {
+        "name": "Anshu",
+        "role": "Backend Developer",
+        "contact": "https://github.com/",
+        "social": "https://instagram.com/",
+        "connect": "https://linkedin.com/"
+    },
+    {
+        "name": "Contributor",
+        "role": "UI/UX Designer",
+        "contact": "https://github.com/",
+        "social": "https://instagram.com/",
+        "connect": "https://linkedin.com/"
     }
 ]
