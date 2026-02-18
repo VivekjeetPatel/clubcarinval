@@ -6,15 +6,17 @@ import useSwipeNavigation from "../hooks/useSwipeNavigation";
 const PATH_ORDER = ["/", "/notifications", "/games", "/about", "/developers"];
 
 export default function Developers() {
-    const bindSwipe = useSwipeNavigation(PATH_ORDER);
+    useSwipeNavigation(PATH_ORDER);
     const [devs, setDevs] = useState([]);
+
 
     useEffect(() => {
         getDevelopers().then(res => setDevs(res.data));
     }, []);
 
     return (
-        <div className="container" {...bindSwipe()} style={{ touchAction: 'pan-y' }}>
+        <div className="container" style={{ touchAction: 'pan-y' }}>
+
             <Header title="👨‍💻 Devs" />
 
             {devs.map((dev, i) => (

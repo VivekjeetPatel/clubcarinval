@@ -3,10 +3,14 @@ import { getGames } from "../api";
 import "./Games.css"; // Create this usage
 import Loading from "../components/Loading";
 import Header from "../components/Header";
+import useSwipeNavigation from "../hooks/useSwipeNavigation";
 
+const PATH_ORDER = ["/", "/notifications", "/games", "/about", "/developers"];
 
 export default function Games() {
+    useSwipeNavigation(PATH_ORDER);
     const [games, setGames] = useState([]);
+
     const [currentIndex, setCurrentIndex] = useState(0);
     const [loading, setLoading] = useState(true);
 

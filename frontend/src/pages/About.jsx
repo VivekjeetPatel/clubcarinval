@@ -2,9 +2,14 @@ import { useEffect, useState } from "react";
 import { getAbout } from "../api";
 import Loading from "../components/Loading";
 import Header from "../components/Header";
+import useSwipeNavigation from "../hooks/useSwipeNavigation";
+
+const PATH_ORDER = ["/", "/notifications", "/games", "/about", "/developers"];
 
 export default function About() {
+    useSwipeNavigation(PATH_ORDER);
     const [data, setData] = useState(null);
+
 
     useEffect(() => {
         getAbout().then(res => setData(res.data));

@@ -1,3 +1,4 @@
+```
 import { useEffect, useState } from "react";
 import { getNotifications } from "../api";
 import Header from "../components/Header";
@@ -6,7 +7,7 @@ import useSwipeNavigation from "../hooks/useSwipeNavigation";
 const PATH_ORDER = ["/", "/notifications", "/games", "/about", "/developers"];
 
 export default function Notifications() {
-    const bindSwipe = useSwipeNavigation(PATH_ORDER);
+    useSwipeNavigation(PATH_ORDER);
     const [data, setData] = useState([]);
 
 
