@@ -23,23 +23,23 @@ export default function About() {
 
 
             <div className="card">
-                <h3 style={{ color: 'var(--accent1)' }}>EVENT:</h3>
+                <h3 style={{ color: 'var(--accent1)', textAlign: 'center' }}>EVENT</h3>
                 <p>{data.event}</p>
             </div>
 
             <div className="card">
-                <h3 style={{ color: 'var(--accent2)' }}>CLUB:</h3>
+                <h3 style={{ color: 'var(--accent2)', textAlign: 'center' }}>CLUB</h3>
                 <p>{data.club}</p>
             </div>
 
             <div className="card">
-                <h3 style={{ color: 'white' }}>FEST:</h3>
+                <h3 style={{ color: 'white', textAlign: 'center' }}>FEST</h3>
                 <p>{data.fest}</p>
             </div>
 
             {data.instagram && (
                 <div className="card social-section" style={{ textAlign: 'center', marginTop: '20px' }}>
-                    <h3 style={{ color: '#E1306C', marginBottom: '15px' }}>FOLLOW US:</h3>
+                    <h3 style={{ color: '#E1306C', marginBottom: '15px' }}>FOLLOW US</h3>
                     <a href={data.instagram} target="_blank" rel="noreferrer" className="btn" style={{
                         background: 'linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%)',
                         border: 'none',

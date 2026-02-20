@@ -1,30 +1,30 @@
 [
     {
         "name": "Vivekjeet Patel",
-        "role": "Full Stack Developer",
+        "role": "Technical Lead",
         "contact": "https://github.com/VivekjeetPatel",
-        "social": "https://instagram.com/vivekjeetpatel",
-        "connect": "https://www.linkedin.com/in/vivekjeet-patel/"
+        "social": "https://www.instagram.com/vivek_jeet__/",
+        "connect": "https://www.linkedin.com/in/vivekjeet-patel-244756267/"
     },
     {
-        "name": "Ansh",
-        "role": "Frontend Developer",
-        "contact": "https://github.com/",
-        "social": "https://instagram.com/",
-        "connect": "https://linkedin.com/"
-    },
-    {
-        "name": "Anshu",
-        "role": "Backend Developer",
-        "contact": "https://github.com/",
-        "social": "https://instagram.com/",
-        "connect": "https://linkedin.com/"
-    },
-    {
-        "name": "Contributor",
+        "name": "Palak Shivhare",
         "role": "UI/UX Designer",
-        "contact": "https://github.com/",
-        "social": "https://instagram.com/",
-        "connect": "https://linkedin.com/"
+        "contact": "https://github.com/23et10pa44-design",
+        "social": "https://www.instagram.com/_.palaxkk?igsh=MTMzdGZxZjQ3cmZuZw==",
+        "connect": "https://www.linkedin.com/in/palak-shivhare-b73a55278/"
+    },
+    {
+        "name": "Anushka Sharma",
+        "role": "Frontend Developer",
+        "contact": "https://github.com/sharmaanushka6757-cyber",
+        "social": "Social: https://www.instagram.com/sharma_anushka26?igsh=NXZvZTV4ajlvd2E5",
+        "connect": "https://www.linkedin.com/in/anushka-sharma-47a53b278/"
+    },
+    {
+        "name": "Himesh Badlani",
+        "role": "Backend Developer",
+        "contact": "https://github.com/himesh-17/",
+        "social": "https://www.instagram.com/himesh_badlani_/",
+        "connect": "https://www.linkedin.com/in/himesh-badlani-03778b322/"
     }
 ]
