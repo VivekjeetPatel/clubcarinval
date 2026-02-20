@@ -1,85 +1,92 @@
 [
   {
-    "name": "Jenga",
+    "name": "Jenga Challenge",
     "icon": "🧱",
     "howToPlay": [
-      "The towerf must be built properly before starting.",
-      "Players will play one by one in turns.",
-      "Remove one block carefully and place it on the top."
+      "A fun balance and concentration game where players remove wooden blocks without collapsing the tower.",
+      "Participants: Individual (1 vs 1 format)",
+      "Time Limit: 5–7 minutes per match"
     ],
     "rules": [
-      "Use only one hand.",
-      "Do not shake or hit the table.",
-      "Remove only one block per turn.",
-      "If the tower falls during your turn, you lose.",
-      "Time limit per turn: 30 seconds.",
-      "Judge’s decision is final."
+      "•\tPlayers take turns removing one block at a time.",
+      "•\tOnly one hand allowed.",
+      "•\tBlock must be placed on top after removal.",
+      "•\tIf the tower falls during your turn, you lose.",
+      "•\tReferee’s decision is final.",
+      "Winning Criteria: Last player who successfully places a block without collapse wins.",
+      "Suggested Prize: Winner certificate + Goodies"
     ],
     "tips": []
   },
   {
-    "name": "Ping Pong",
+    "name": "Ping Pong Tournament",
     "icon": "🏓",
     "howToPlay": [
-      "Players stand on opposite sides of the table.",
-      "Use standard paddle and ball.",
-      "Start only after referee’s signal."
+      "A mini table tennis competition.",
+      "Participants: Singles (1 vs 1)",
+      "Match Format: 11 points per game, Best of 3 sets"
     ],
     "rules": [
-      "Match will be played up to 11 points.",
-      "Win by at least 2 points.",
-      "Ball must bounce once on each side during serve.",
-      "Each player gets 2 serves alternately.",
-      "Touching the table or net intentionally is a foul.",
-      "Fair play is compulsory."
+      "•\tStandard table tennis rules apply.",
+      "•\tService alternates every 2 points.",
+      "•\tIf ball touches net and crosses, replay.",
+      "•\tUnsportsmanlike behavior leads to disqualification.",
+      "Winning Criteria: First to win 2 sets."
     ],
     "tips": []
   },
   {
-    "name": "Paper Cutting",
+    "name": "Paper Cutting Art Competition",
     "icon": "✂️",
     "howToPlay": [
-      "Each participant will receive one sheet of paper.",
-      "Theme/design will be announced before start.",
-      "Use scissors only."
+      "Creative event where participants make designs using paper cutting.",
+      "Participants: Individual",
+      "Time Limit: 20–30 minutes"
     ],
     "rules": [
-      "No pre-cut or extra paper allowed.",
-      "Time limit: 3–5 minutes.",
-      "No sharing of materials.",
-      "Judging will be based on neatness and creativity.",
-      "Late submissions will not be accepted."
+      "•\tOnly paper and scissors allowed.",
+      "•\tTheme will be given on the spot.",
+      "•\tNo pre-prepared materials allowed.",
+      "•\tNeatness and creativity will be judged."
     ],
-    "tips": []
+    "tips": [
+      "•\tCreativity (10 marks)",
+      "•\tClean finishing (10 marks)",
+      "•\tTheme relevance (10 marks)"
+    ]
   },
   {
-    "name": "Memory Card",
+    "name": "Memory Card Game",
     "icon": "🃏",
     "howToPlay": [
-      "Cards will be placed face down.",
-      "Players will take turns flipping two cards."
+      "Test your memory by matching card pairs.",
+      "Participants: Individual",
+      "Time Limit: 5 minutes per round"
     ],
     "rules": [
-      "If cards match, player gets another turn.",
-      "If not, cards must be placed back in same position.",
-      "No touching extra cards.",
-      "No help from audience.",
-      "Player with maximum pairs wins."
+      "•\tCards placed face down.",
+      "•\tPlayer flips two cards per turn.",
+      "•\tIf they match, player continues.",
+      "•\tIf not, next participant’s turn.",
+      "•\tMost matches wins.",
+      "Winning Criteria: Maximum matched pairs within time."
     ],
     "tips": []
   },
   {
-    "name": "Push-ups",
+    "name": "Push-up Challenge",
     "icon": "💪",
     "howToPlay": [
-      "Body must stay straight.",
-      "Judge will count correct push-ups."
+      "Participants: Individual",
+      "Time Limit: 1 minute"
     ],
     "rules": [
-      "Only correct form will be counted.",
-      "Time limit: 1 minute.",
-      "No resting on knees.",
-      "Judge’s decision is final."
+      "6.\tRules:",
+      "•\tProper push-up form required.",
+      "•\tChest must go low enough.",
+      "•\tHalf push-ups not counted.",
+      "•\tJudge’s counting is final.",
+      "Winner: Highest number of valid push-ups."
     ],
     "tips": []
   },
@@ -87,30 +94,36 @@
     "name": "Arm Wrestling",
     "icon": "💪",
     "howToPlay": [
-      "Elbows must stay on the table.",
-      "Start after referee’s signal."
+      "Participants: 1 vs 1"
     ],
     "rules": [
-      "No lifting elbow.",
-      "No unfair body movement.",
-      "First to pin opponent’s hand wins.",
-      "Referee decision is final."
+      "•\tElbow must stay on table.",
+      "•\tNo sudden jerks.",
+      "•\tBest of 3 rounds.",
+      "•\tReferee monitors fair play.",
+      "Winner: First to win 2 rounds."
     ],
     "tips": []
   },
   {
-    "name": "Tongue Twister",
+    "name": "Tongue Twister Challenge",
     "icon": "👅",
     "howToPlay": [
-      "Participant must repeat given tongue twister 3 times continuously.",
-      "Speak clearly and confidently."
+      "Fun speaking challenge testing clarity and speed.",
+      "Participants: Individual",
+      "Time Limit: 30 seconds per round"
     ],
     "rules": [
-      "No major mistakes allowed.",
-      "Time limit: 1 minute.",
-      "If mistake happens, restart.",
-      "Best clarity and fluency wins."
+      "•\tParticipant reads given tongue twister.",
+      "•\tMust repeat 3 times continuously.",
+      "•\tMistakes lead to restart.",
+      "•\tSpeed and clarity judged."
     ],
-    "tips": []
+    "tips": [
+      "9.\tJudging Criteria:",
+      "•\tAccuracy",
+      "•\tSpeed",
+      "•\tPronunciation"
+    ]
   }
 ]
